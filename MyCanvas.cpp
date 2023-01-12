@@ -22,7 +22,7 @@ MyCanvas::MyCanvas(const GBitmap& device) : fDevice(device) {
 }
 
 void MyCanvas::drawQuad(const GPoint verts[4], const GColor colors[4], const GPoint textures[4], int level, const GPaint& paint) {
-    std::cout << "x0: " << verts[0].x() << ", y0: " << verts[0].y() << ", x1: " << verts[1].x() << ", y1: " << verts[1].y() << ", x2: " << verts[2].x() << ", y2: " << verts[2].y() << ", x3: " << verts[3].x() << ", y3: " << verts[3].y() << "\n";
+    //std::cout << "x0: " << verts[0].x() << ", y0: " << verts[0].y() << ", x1: " << verts[1].x() << ", y1: " << verts[1].y() << ", x2: " << verts[2].x() << ", y2: " << verts[2].y() << ", x3: " << verts[3].x() << ", y3: " << verts[3].y() << "\n";
     
     int rowLength = 2 + level;
     int vertCount = rowLength * rowLength;
@@ -61,7 +61,7 @@ void MyCanvas::drawQuad(const GPoint verts[4], const GColor colors[4], const GPo
         v += inverseRowLength;
     }
 
-    std::cout << "x0: " << vertsMesh[0].x() << ", y0: " << vertsMesh[0].y() << ", x1: " << vertsMesh[9].x() << ", y1: " << vertsMesh[9].y() << ", x2: " << vertsMesh[99].x() << ", y2: " << vertsMesh[99].y() << ", x3: " << vertsMesh[90].x() << ", y3: " << vertsMesh[90].y() << "\n";
+    //std::cout << "x0: " << vertsMesh[0].x() << ", y0: " << vertsMesh[0].y() << ", x1: " << vertsMesh[9].x() << ", y1: " << vertsMesh[9].y() << ", x2: " << vertsMesh[99].x() << ", y2: " << vertsMesh[99].y() << ", x3: " << vertsMesh[90].x() << ", y3: " << vertsMesh[90].y() << "\n";
 
 
     int index = 0;
@@ -91,7 +91,7 @@ void MyCanvas::drawQuad(const GPoint verts[4], const GColor colors[4], const GPo
 
     }
 
-    std::cout <<"TriCount: " << triCount << "\n";
+    //std::cout <<"TriCount: " << triCount << "\n";
 
     if (colors == nullptr) {
         if (textures == nullptr) drawMesh(vertsMesh, nullptr, nullptr, triCount, indices, paint);
@@ -109,7 +109,7 @@ void MyCanvas::drawMesh(const GPoint verts[], const GColor colors[], const GPoin
         int i0 = indices[i];
         int i1 = indices[i + 1];
         int i2 = indices[i + 2];
-        std::cout << "Indices: " << i0 << ", " << i1 << ", " << i2 << "\n";
+        //std::cout << "Indices: " << i0 << ", " << i1 << ", " << i2 << "\n";
 
         GPoint triVerts[3];
         GPoint triTextures[3];
